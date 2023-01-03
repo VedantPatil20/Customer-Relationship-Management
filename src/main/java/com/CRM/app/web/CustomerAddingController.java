@@ -10,7 +10,7 @@ import com.CRM.app.service.CustomerService;
 import com.CRM.app.web.dto.CustomerAddingDto;
 
 @Controller
-@RequestMapping("/customer/save")
+@RequestMapping("/addcustomers")
 public class CustomerAddingController {
 	
 	private CustomerService customerSevice;
@@ -34,7 +34,7 @@ public class CustomerAddingController {
 	public String addCutomers(@ModelAttribute("customer") CustomerAddingDto customerAddingDto) {
 		
 		customerSevice.save(customerAddingDto);
-		return "redirect://customer/save?success";
+		return "redirect:/addcustomers?success";
 		
 	}
 
