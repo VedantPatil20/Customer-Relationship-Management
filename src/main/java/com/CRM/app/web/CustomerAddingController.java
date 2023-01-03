@@ -34,7 +34,7 @@ public class CustomerAddingController {
 	public String addCutomers(@ModelAttribute("customer") CustomerAddingDto customerAddingDto) {
 		
 		customerSevice.save(customerAddingDto);
-		return "redirect:/addcustomer?success";
+		return "redirect:/addcustomers?success";
 		
 	}
 
