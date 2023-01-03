@@ -1,5 +1,8 @@
 package com.CRM.app.service;
 
+import java.util.List;
+import java.util.Optional;
+
 import org.springframework.stereotype.Service;
 
 import com.CRM.app.model.Customer;
@@ -15,6 +18,11 @@ public class CustomerServiceImpl implements CustomerService {
 		super();
 		this.customerRepository = customerRepository;
 	}
+	
+	@Override
+	public List<Customer> getAllCustomers() {
+		return customerRepository.findAll();
+	}
 
 	@Override
 	public Customer save(CustomerAddingDto customerAddingDto) {
@@ -25,6 +33,23 @@ public class CustomerServiceImpl implements CustomerService {
 										 customerAddingDto.getContact());
 		
 		return customerRepository.save(customer);
+		
+	}
+
+	@Override
+	public Customer getCustomerById(Long id) {
+		
+		Optional <Customer> optional = customerRepository.findById(id);
+		
+		Customer customer = null;
+		
+		if (optional.isPresent()) {
+			customer = optional.get();
+		} else {
+			throw new RuntimeException("Customer not found for id:: " + id);
+		}
+		
+		return customer;
 		
 	}
 	

@@ -25,6 +25,10 @@ public class Customer {
 	private String email;
 	private Long contact;
 	
+	public Customer() {
+		
+	}
+
 	public Customer(String firstName, String lastName, String email, Long contact) {
 		super();
 		this.firstName = firstName;
