@@ -23,7 +23,7 @@
             
             	<div class="h3 text-decoration-underline mb-4">Save Customer</div>
 
-                <form th:action="@{/addcustomers}" method="post" th:object="${customer}">
+                <form th:action="@{/customer/save}" method="post" th:object="${customer}">
 
                     <div class="row my-1">
                         <div class="col-lg-3 text-end">
@@ -82,7 +82,7 @@
 
                 </form>
 
-                <a href="index.html">Back to List</a>
+                <a href="">Back to List</a>
 
             </div>
         </div>
