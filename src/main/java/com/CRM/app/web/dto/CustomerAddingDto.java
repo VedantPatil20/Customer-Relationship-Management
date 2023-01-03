@@ -7,6 +7,10 @@ public class CustomerAddingDto {
 	private String email;
 	private Long contact;
 	
+	public CustomerAddingDto() {
+		
+	}
+
 	public CustomerAddingDto(String firstName, String lastName, String email, Long contact) {
 		super();
 		this.firstName = firstName;

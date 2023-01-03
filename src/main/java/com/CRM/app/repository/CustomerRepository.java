@@ -7,7 +7,5 @@ import com.CRM.app.model.Customer;
 
 @Repository
 public interface CustomerRepository extends JpaRepository<Customer, Long> {
-	
-	
 
 }

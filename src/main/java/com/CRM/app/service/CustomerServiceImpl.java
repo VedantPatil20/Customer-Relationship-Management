@@ -1,10 +1,13 @@
 package com.CRM.app.service;
 
+import org.springframework.stereotype.Service;
+
 import com.CRM.app.model.Customer;
 import com.CRM.app.repository.CustomerRepository;
 import com.CRM.app.web.dto.CustomerAddingDto;
 
-public class CustomerServiceImpl implements CustomerSevice {
+@Service
+public class CustomerServiceImpl implements CustomerService {
 
 	private CustomerRepository customerRepository;
 	

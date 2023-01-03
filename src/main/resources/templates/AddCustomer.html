@@ -1,10 +1,93 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <title>Add Customers</title>
 </head>
 <body>
+
+	<!-- Create Navigation Bar -->
+
+	<nav class="navbar navbar-light bg-success">
+        <div class="container">
+          <span class="navbar-brand mb-0 h1 text-white fw-bolder fs-1">CRM - Customer Relationship Management</span>
+        </div>
+    </nav>
+	
+	<div class="container">
+
+        <div class="row">
+        
+            <div class="col-lg-6">
+            
+            	<div class="h3 text-decoration-underline mb-4">Save Customer</div>
+
+                <form th:action="@{/addcustomer}" method="post" th:object="${customer}">
+
+                    <div class="row my-1">
+                        <div class="col-lg-3 text-end">
+                            <label class="h5">First Name:</label>
+                        </div>
+    
+                        <div class="col-lg-7">
+                            <input type="text" class="form-control form-control-sm border-success" th:field="*{firstName}">
+                        </div>
+    
+                    </div>
+                    
+                    <div class="row my-1">
+                        <div class="col-lg-3 text-end">
+                            <label class="h5">Last Name:</label>
+                        </div>
+    
+                        <div class="col-lg-7">
+                            <input type="text" class="form-control form-control-sm border-success" th:field="*{lastName}">
+                        </div>
+    
+                    </div>
+                    
+                    <div class="row my-1">
+                        <div class="col-lg-3 text-end">
+                            <label class="h5">Email:</label>
+                        </div>
+    
+                        <div class="col-lg-7">
+                            <input type="text" class="form-control form-control-sm border-success" th:field="*{email}">
+                        </div>
+    
+                    </div>
+                    
+                    <div class="row my-1">
+                        <div class="col-lg-3 text-end">
+                            <label class="h5">Email:</label>
+                        </div>
+    
+                        <div class="col-lg-7">
+                            <input type="text" class="form-control form-control-sm border-success" th:field="*{contact}">
+                        </div>
+    
+                    </div>
+                    
+                    <div class="row my-3">
+                        <div class="col-lg-4">
+                            <label></label>
+                        </div>
+    
+                        <div class="col-lg-7">
+                            <button type="submit" class="btn btn-light border-2 border-success px-5 fw-bold">Save</button>
+                        </div>
+    
+                    </div>
+
+                </form>
+
+                <a href="index.html">Back to List</a>
+
+            </div>
+        </div>
+
+    </div>
 
 </body>
 </html>
