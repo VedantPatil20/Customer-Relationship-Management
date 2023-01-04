@@ -25,7 +25,7 @@
             
             	<div class="h3 text-decoration-underline mb-4">Update Customer</div>
 
-                <form th:action="@{/customers}" method="post" th:object="${customer}">
+                <form th:action="@{/customers/{id}(id=${customer.id})}" method="post" th:object="${customer}">
 
                     <div class="row my-1">
                         <div class="col-lg-3 text-end">

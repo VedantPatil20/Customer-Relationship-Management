@@ -48,6 +48,7 @@ public class CustomerAddingController {
 		
 	}
 	
+	@PostMapping("/customers/{id}")
 	public String updateCustomer(@PathVariable Long id, @ModelAttribute("customer") Customer customer, Model model) {
 		
 		Customer existingCustomer = customerSevice.getCustomerById(id);
@@ -60,6 +61,14 @@ public class CustomerAddingController {
 		
 		customerSevice.updateCustomer(existingCustomer);
 		
+		return "redirect:/customers";
+		
+	}
+	
+	@GetMapping("/customers/{id}")
+	public String deleteCustomer(@PathVariable Long id) {
+		
+		customerSevice.deleteCustomerById(id);
 		return "redirect:/customers";
 		
 	}
