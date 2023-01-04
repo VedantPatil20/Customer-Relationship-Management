@@ -48,8 +48,8 @@
                         <td th:text="${customer.email}" class="text-center"></td>
                         <td th:text="${customer.contact}" class="text-center"></td>
                         <td class="text-center">
-                            <span><a href="#" class="btn btn-warning btn-sm border-0">Update</a></span>                          
-                            <span><a href="#" class="btn btn-danger btn-sm border-0">Delete</a></span>                          
+                            <span><a th:href="@{/customers/edit/{id}(id=${customer.id})}" class="btn btn-warning btn-sm border-0">Update</a></span>                          
+                            <span><a href="" class="btn btn-danger btn-sm border-0">Delete</a></span>                          
                         </td>
                       </tr>
                     </tbody>
