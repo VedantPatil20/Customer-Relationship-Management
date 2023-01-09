@@ -40,7 +40,7 @@ public class CustomerServiceImpl implements CustomerService {
 	@Override
 	public Customer updateCustomer(Customer customer) {
 		
-		return customerRepository.saveAndFlush(customer);
+		return customerRepository.save(customer);
 		
 	}
 
